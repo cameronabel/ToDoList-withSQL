@@ -64,5 +64,23 @@ namespace ToDoList.Models
       Item placeholderItem = new Item("placeholder item");
       return placeholderItem;
     }
+
+    public override bool Equals(System.Object otherItem)
+    {
+      if (!(otherItem is Item))
+      {
+        return false;
+      }
+      else
+      {
+        Item newItem = (Item)otherItem;
+        bool descriptionEquality = (this.Description == newItem.Description);
+        return descriptionEquality;
+      }
+    }
+    public override int GetHashCode()
+    {
+      return Id.GetHashCode();
+    }
   }
 }

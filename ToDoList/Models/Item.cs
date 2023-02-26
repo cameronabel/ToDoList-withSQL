@@ -64,6 +64,10 @@ namespace ToDoList.Models
       Item placeholderItem = new Item("placeholder item");
       return placeholderItem;
     }
+    public void Save()
+    {
+
+    }
 
     public override bool Equals(System.Object otherItem)
     {

@@ -139,7 +139,7 @@ namespace ToDoList.Tests
       newItem2.Save();
 
       //Act
-      Item foundItem = Item.Find(newItem.Id);
+      Item foundItem = Item.Find(newItem.ItemId);
       //Assert
       Assert.AreEqual(newItem, foundItem);
     }
